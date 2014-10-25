@@ -1,2 +1,2 @@
-startbootstrap-thumbnail-gallery
-================================
+Start Bootstrap - Thumbnail Gallery
+=========
