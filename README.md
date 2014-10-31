@@ -2,8 +2,6 @@
 
 [Thumbnail Gallery](http://startbootstrap.com/template-overviews/thumbnail-gallery/) is a responsive thumbnail grid template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
-### [Demo](http://ironsummitmedia.github.io/startbootstrap-thumbnail-gallery/)
-
 ## Getting Started
 
 To use this template, choose one of the following options to get started:
