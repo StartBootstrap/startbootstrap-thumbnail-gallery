@@ -1,156 +1,374 @@
+<?php
+/* Grab header */
+define('WP_USE_THEMES', false);
+require('blog/wp-blog-header.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+    <head>        
+        <title>Stephen Sorensen</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--import bootstrap CDN css file-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!--import jQuery-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>        
+        <!--bootstrap CDN js file-->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- import google font (quicksand for navbar font / Maven Pro for jumbotron-->
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+        <!--font awesome icons-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!--jQuery CDN -->
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
-<head>
+        <!--page styling-->
+        <style>
+            /**Who Am I section**/
+            .bg-1 { 
+                background-color: #f2f2f2; /* Off White */                                
+                color: #000000;                
+                overflow: hidden;
+            }
+            /**Recent Work**/
+            .bg-2 { 
+                background-color: #474e5d; /* Dark Blue */
+                color: #ffffff;
+            }
+            .bg-2 a{
+                color: #ffffff;
+            }
+            /**blog**/
+            .bg-3 {
+                background-color: #e8effc;
+                color: #000000;
+            }
+            /**Contact**/
+            .bg-4 { 
+                background-color: #f2f2f2; /* White */
+                color: #555555;
+            }
+            /**footer**/
+            .bg-5 { 
+                background-color: #2f2f2f;
+                color: #ffffff;
+            }
+            /**Container config**/
+            .container-fluid {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            /**caption settings for portfolio grid**/
+            .caption{
+                background-color: #f2f2f2;
+                border-radius: 10px;
+            }
+            /**change jumbotron padding and margins**/
+            .jumbotron{
+                padding-bottom: 0;
+                margin-bottom: 0;
+                overflow: hidden;
+            }
+            /*set body color to match containers*/
+            body{
+                background-color: #f2f2f2;
+            }
+            /**jumbotron text**/
+            header {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: captiontext;
+                text-align: center;
+            }
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Thumbnail Gallery - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/thumbnail-gallery.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">Thumbnail Gallery</h1>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+            /**jumbotron text**/
+            header h1 {
+                text-transform: uppercase;
+                margin: 0;
+                font-size: 3rem;
+                white-space: nowrap;
+                font-family: 'Maven Pro', sans-serif;
+                text-shadow: 1px 3px #fffff0;
+            }
+            header p {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+            /**nav bar config**/
+            .navbar-inner {
+                min-height: 0px;
+            }
+            .navbar { 
+                font-family: 'Quicksand', sans-serif;
+                font-size: large;
+                background-color: #f2f2f2;
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+            .navbar-brand,
+            .navbar-nav li a {
+                line-height: 20px;
+                height: 30px;
+                margin-top: 0;
+                margin-bottom: 5%;
+            }
+            /**navbar hover color*/
+            .navbar-nav li a:hover {
+                color: #1abc9c !important;
+            }
+            /**text over image**/        
+            .carousel-caption{
+                position: absolute;
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                left: 550px;
+                top: 250px;
+                transform: translateY(-30%);
+                transform: translateX(20%);
+            }
+            /*Recent Work dropdown menu**/
+            #panel, #flip {
+                padding: 2px;
+                text-align: center;
+                background-color: #474e5d;
+                border: solid 1px #c3c3c3;
+            }
+            #panel {
+                padding: 50px;
+                display: none;
+                overflow: hidden;
+            }           
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="20">         
+        <!-- navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a id="bounce" class="navbar-brand navbar-left" style="font-size: medium;" href="http://freshcode.us">Freshcode.us</a>
+                    <!--insert logo bounce jQuery-->
+                    <script>
+                        $(document).click(function () {
+                            $("#bounce").toggle("bounce", {times: 3}, "slow");
+                        });
+                    </script>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://freshcode.us">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>                    
                 </div>
             </div>
-        </footer>
+        </nav>
 
-    </div>
-    <!-- /.container -->
+        <!--Welcome-->
+        <div class="jumbotron">
+            <img class="img-responsive" src="/image/office.jpg"                 
+                 style="width: 100%; padding-top: 20px; height:550px; overflow: hidden;"
+                 />
+            <header>
+                <h1>
+                    Stephen Sorensen
+                    <br><hr>Web Developer<br>
+                    <div style="padding-bottom: 10%;">
+                        <button class="btn-lg" value="Remove GitHub" style="background-image:url(/image/buttonTexture.jpg)" 
+                                onClick="window.location = 'https://github.com/stephensorensen'">
+                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                            <label class="hidden-xs"><b> GitHub</b></label>
+                        </button>  
+                        <button class="btn-lg" style="background-image:url(/image/buttonTexture.jpg)" 
+                                onClick="window.location = 'https://www.linkedin.com/in/sorensenstephen'">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <label class="hidden-xs"><b> LinkedIn</b></label>
+                        </button>                        
+                        <button class="btn-lg" style="background-image:url(/image/buttonTexture.jpg)" 
+                                onClick="window.location = 'http://codepen.io/thorn2040'">
+                            <i class="fa fa-codepen" aria-hidden="true"></i>
+                            <label class="hidden-xs"><b> CodePen</b></label>
+                        </button>
+                    </div>
+                </h1>
+            </header>
+        </div>
+        <!--About me -->                  
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="image/stephen-sorensen.jpg" 
+                         alt="stephen sorensen" 
+                         class="img-responsive" 
+                         style="background-size: fill; width: 100%;">
+                    <div class="carousel-caption">
+                        My name is Stephen Sorensen and I'm a Computer Science student attending Weber State University.
+                        I love all things Web related and spend much of my time deepening my knowledge of web development.
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+        <!--Recent work-->
+        <div id="portfolio" class="container-fluid bg-2">
+            <!--jQuery dropdown menu start-->
+            <div id="flip"><h3>Recent Work</h3></div>           
+            <div id="panel">                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-4 caption">
+                            <img class="thumbnail" 
+                                 src="/image/band.jpg"
+                                 style="height: 250px; width: 100%;"/>
+                            <div style="background-color: #474e5d;">
+                                Band tribute page created with Bootstrap and features jQuery plugin
+                                <div>
+                                    <button class="btn-info btn-lg" 
+                                            style="float: right;"
+                                            >
+                                        <a href="http://www.freshcode.us/theBand/theBand.html">Click for demo</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+                        <div class="col-xs-12 col-lg-4 caption">
+                            <img class="thumbnail" 
+                                 src="/image/pizza.jpg"
+                                 style="height: 250px; width: 100%;"/>
+                            <div style="background-color: #474e5d;">
+                                Simple form menu created with jQuery UI and jQuery events. The site was designed to guide the user throughout the order form.
+                                <div>
+                                    <button class="btn-info btn-lg" 
+                                            style="float: right;">
+                                        <a href="http://www.freshcode.us/papaPizza/pizza.html">Click for demo</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>                        
 
-</body>
 
+                        <div class="col-xs-12 col-lg-4 caption">
+                            <img class="thumbnail" 
+                                 src="/image/company.jpg"
+                                 style="height: 250px; width: 100%;"/>                    
+                            <div style="background-color: #474e5d;">
+                                Company page created with Bootstrap and features jQuery cycle plugin. 
+                                <div>
+                                    <button class="btn-info btn-lg" 
+                                            style="float: right;"
+                                            >
+                                        <a href="http://www.freshcode.us/Company/Company.html">Click for demo</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix visible-lg-block"></div>
+
+                        <div class="col-xs-12 col-lg-4 caption">
+                            <img class="thumbnail" 
+                                 fit="contain" 
+                                 src="/image/php.jpg"
+                                 style="height: 250px; width: 100%;"/>
+                            <div style="background-color: #474e5d;">
+                                Company page created with Bootstrap and features jQuery cycle plugin. 
+                                <div>
+                                    <button class="btn-info btn-lg" 
+                                            style="float: right;"
+                                            >
+                                        <a href="http://www.freshcode.us/Company/Company.html">Click for demo</a>
+                                    </button>
+                                </div>
+                            </div>                        
+                        </div>
+
+                        <div class="col-xs-12 col-lg-4 caption">
+                            <img class="thumbnail" 
+                                 src="/image/company.jpg"
+                                 style="height: 250px; width: 100%;"/>
+                        </div>
+                        <div class="col-xs-12 col-lg-4 caption">
+                            <img class="thumbnail" 
+                                 src="/image/company.jpg"
+                                 style="height: 250px; width: 100%;"/>
+                        </div>                
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    $("#flip").on({
+                        mouseenter: function () {
+                            $(this).css("background-color", "lightgray");
+                            $(this).css("color", "#000000");
+                        },
+                        mouseleave: function () {
+                            $(this).css("background-color", "#474e5d");
+                            $(this).css("color", "#ffffff");
+                        },
+                        click: function () {
+                            $(this).css("background-color", "#f2f2f2");
+                            $("#panel").slideToggle("slow");
+                        }
+                    });
+                });
+            </script>
+
+            <!--jQuery dropdown menu end-->
+        </div>
+        <!--Blog-->
+        <div id="blog" class="container-fluid bg-3 text-center"> 
+            <h3>Latest from the blog</h3>
+            <div class="container-fluid">
+                <?php
+                // Get the last 3 posts.
+                global $post;
+                $args = array('posts_per_page' => 3);
+                $myposts = get_posts($args);
+                foreach ($myposts as $post) : setup_postdata($post);
+                    ?>
+                    <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3><br />
+                <?php endforeach; ?>
+            </div>
+            <a href="blog/index.php">View all blog entries</a>
+        </div>
+
+        <!--Contact-->
+        <div id="contact" class="container-fluid bg-4" style="margin-top: 2em;">
+            <h3 class="text-center">Contact</h3>
+            <p class="text-center"><em>Questions, Comments?</em></p>
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>Drop a note</h3>
+                    <p><i class="fa fa-map-marker fa-2x"></i></span> Utah, US</p>                        
+                    <p><i class="fa fa-envelope-o fa-2x"></i></span> Email: <a href="mailto:sorensenstephen@ymail.com"> sorensenstephen@ymail.com</a></p>
+
+                </div>                
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <?php
+                            echo do_shortcode('[contact-form-7 id="162" title="Contact form 1"]');
+                            ?>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+            <footer class="container-fluid bg-5 text-center">
+                <p>Bootstrap Theme Made By <a href="http://www.stephensorensen.net">Stephen Sorensen</a></p> 
+            </footer>
+    </body>
 </html>
