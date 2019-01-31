@@ -1,3 +1,5 @@
+*This template has been replaced with a snippet on Start Bootstrap. The repository for this template has been archived, and will receive no future updates. [Click here](https://startbootstrap.com/snippets/thumbnail-gallery/) to view the actively developed snippet for this template on Start Bootstrap.*
+
 # [Start Bootstrap - Thumbnail Gallery](https://startbootstrap.com/template-overviews/thumbnail-gallery/)
 
 [Thumbnail Gallery](http://startbootstrap.com/template-overviews/thumbnail-gallery/) is a responsive thumbnail grid template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
